@@ -35,8 +35,8 @@ server.on('request', (req, res) => {
   const limitSizeStream = new LimitSizeStream({limit: 1048576});
   const writableStream = fs.createWriteStream(filepath);
 
-  writableStream.on('close', () => {
-    console.log(`writableStream close`);
+  writableStream.on('finish', () => {
+    console.log(`writableStream finish`);
     res.statusCode = 201;
     res.end('File saved succesfully');
   });
