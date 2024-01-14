@@ -18,6 +18,7 @@ server.on('request', (req, res) => {
       if (parsedPathname.dir) {
         res.statusCode = 400;
         res.end('Incorrect path');
+        return;
       }
 
       const stream = fs.createReadStream(filepath);
