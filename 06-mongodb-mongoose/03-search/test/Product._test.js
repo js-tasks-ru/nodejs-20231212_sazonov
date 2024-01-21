@@ -5,7 +5,7 @@ const connection = require('../libs/connection');
 const expect = require('chai').expect;
 const axios = require('axios');
 
-describe.skip('mongodb-mongoose/search', () => {
+describe('mongodb-mongoose/search', () => {
   let _index = [];
   let _server;
   before(async () => {
@@ -36,7 +36,7 @@ describe.skip('mongodb-mongoose/search', () => {
       subcategory: category.subcategories[0].id,
       images: ['image1'],
     });
-  
+
     await Category.syncIndexes();
     await Product.syncIndexes();
 
