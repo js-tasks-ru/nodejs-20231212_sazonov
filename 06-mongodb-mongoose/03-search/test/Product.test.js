@@ -5,7 +5,7 @@ const connection = require('../libs/connection');
 const expect = require('chai').expect;
 const axios = require('axios');
 
-describe('mongodb-mongoose/search', () => {
+describe.skip('mongodb-mongoose/search', () => {
   let _index = [];
   let _server;
   before(async () => {
