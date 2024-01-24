@@ -36,7 +36,7 @@ describe('mongodb-mongoose/search', () => {
       subcategory: category.subcategories[0].id,
       images: ['image1'],
     });
-  
+
     await Category.syncIndexes();
     await Product.syncIndexes();
 
